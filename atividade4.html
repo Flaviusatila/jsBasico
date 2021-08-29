@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4</title>
+    <script type="text/javascript">
+        nomeCompleto = prompt("Digite o nome completo");
+        primeiroNome = "";
+        restanteDoNome = "";
+        primeiroNomeNaoPassou = true;
+        nomeCompleto += " /"
+        for (i = 0; i < nomeCompleto.length; i++) {
+
+            if (primeiroNomeNaoPassou) {
+                if (nomeCompleto[i] != " ") {
+                    primeiroNome += nomeCompleto[i].toUpperCase();
+                } else {
+                    primeiroNomeNaoPassou = false;
+                }
+            } else {
+                restanteDoNome += nomeCompleto[i].toLowerCase();
+            }
+
+        }
+
+        alert(`${primeiroNome} ${restanteDoNome}`)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

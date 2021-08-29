@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 8</title>
+
+    <script type="text/javascript">
+        texto = prompt("Digite o texto");
+        letras = ["a", "b", "c", "d", "e", "f","g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q","r", "s", "t", "u",
+        "v", "w", "x", "y", "z"," "]
+        palavra = ""
+        texto += " /"
+        for(j=0;j<letras.length;j++){ 
+            palavraFiltrada = []
+            for (i=0; i < texto.length; i++) { 
+                if (texto[i]==" " ) { 
+                    if(letras[j].toUpperCase()==palavra[0].toUpperCase()) { 
+                        palavraFiltrada.push(palavra) 
+                    } 
+                        palavra="" 
+                    } else {
+                        palavra +=texto[i] 
+                    } 
+                } 
+                if (palavraFiltrada.length>0) {
+                    document.write("<p> Palavras Iniciadas com a letra " + letras[j].toUpperCase() + "</p><ul>");
+                        for (k=0; k < palavraFiltrada.length; k++){
+                            document.write("<li>"+palavraFiltrada[k]+"</li>");
+                        }
+                    document.write("</ul>")
+                }
+                
+            }
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade10</title>
+
+    <script type="text/javascript">
+        numeroDigitadoPeloUsuario = prompt("Digite um numero maior ou igual a 2")
+        numerosDecimal = numeroHexadecimal = numeroBinario = []
+
+        for (i = 0; i < numeroDigitadoPeloUsuario; i++) {
+            numerosDecimal += i
+            numeroBinario += Number.toString(2)
+            numeroHexadecimal += Number.toString(16)
+        }
+
+        document.write(`<table border="1">
+                        <tr>
+                            <td>Base decimal</td>
+                            <td>Base binária</td>
+                            <td>Base hexadecimal</td>
+                        </tr>`);
+        for (j = 0; j < numeroDigitadoPeloUsuario; j++) {
+            document.write(`
+                        <tr>
+                            <td>${numerosDecimal[j]}</td>
+                            <td>${numeroBinario[j]}</td>
+                            <td>${numeroHexadecimal[j]}</td>
+                        <tr>
+                    </table>`)
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
